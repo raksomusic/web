@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090812">
+  <meta name="description" content="RaksoMusic — a little corner for art, drum'n'bass, dubstep and creative chaos.">
+  <title>RaksoMusic ☆ — Art, Beats & Creative Chaos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Kalam:wght@300;400;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="RaksoMusic home">RaksoMusic<span>☆</span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="active" href="#home">Home</a>
+      <a href="#art">Art</a>
+      <a href="#music">Music</a>
+      <a href="#about">About</a>
+      <a href="#poem">Poem</a>
+      <a class="headphone-link" href="#music" aria-label="Jump to music">♫</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">HEY! I'M</p>
+        <h1>Rakso<span>Music</span><i>☆</i></h1>
+        <p class="role">16 y/o artist &amp; producer</p>
+        <div class="scribble"></div>
+        <p class="intro">I draw, make drum’n’bass<br>and dubstep, and just love<br>creative chaos. <span>✧</span></p>
+        <a class="outline-button" href="#art">Explore my work <span>↓</span></a>
+        <div class="tiny-note">made with beats &amp; imagination ♡</div>
+      </div>
+
+      <div class="hero-art" aria-label="Illustration of a blonde-haired artist in a sky-blue hoodie with a Boston Terrier">
+        <div class="art-frame frame-a"></div>
+        <div class="art-frame frame-b"></div>
+        <div class="hero-sticker sticker-crown">♕</div>
+        <div class="hero-sticker sticker-star">✧</div>
+        <div class="hero-person">
+          <div class="hero-image"></div>
+          <div class="image-caption">beats in my head · stars in my eyes</div>
+        </div>
+        <span class="spark spark-one">✦</span><span class="spark spark-two">☆</span>
+      </div>
+    </section>
+
+    <section class="feature-grid section-wrap" aria-label="Explore the website">
+      <a class="feature-card art-card" href="#art" id="art">
+        <div class="card-heading"><span class="card-icon">✿</span><h2>Art</h2><span class="arrow">→</span></div>
+        <div class="card-visual sketch-visual"><span class="visual-sun">☼</span><span class="sketch-lines"></span><span class="visual-label">little worlds, big feelings</span></div>
+        <p>Illustrations, sketches<br>and more!</p>
+      </a>
+      <a class="feature-card music-card" href="#music">
+        <div class="card-heading"><span class="card-icon">♫</span><h2>Music</h2><span class="arrow">→</span></div>
+        <div class="card-visual music-visual"><div class="equalizer equalizer-large"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="visual-label">DnB · Dubstep · experiments</span></div>
+        <p>Drum’n’bass, dubstep<br>and beyond...</p>
+      </a>
+      <a class="feature-card about-card" href="#about" id="about">
+        <div class="card-heading"><span class="card-icon">♙</span><h2>About Me</h2><span class="arrow">→</span></div>
+        <div class="about-doodle">♕<span>✧</span><span>♡</span></div>
+        <p class="about-line">Just a 16 y/o<br>creative soul. ♡</p>
+      </a>
+    </section>
+
+    <section class="lower-grid section-wrap">
+      <div class="release-panel panel" id="music">
+        <div class="panel-title"><span>Latest Release</span><span class="mini-star">✧</span></div>
+        <div class="player-row">
+          <button class="play-button" id="playButton" aria-label="Play preview"><span class="play-icon">▶</span></button>
+          <div class="track-info"><strong>Neon Dreams</strong><small>DnB / Dubstep</small>
+            <div class="waveform" id="waveform" aria-label="Decorative audio waveform"></div>
+          </div>
+        </div>
+        <div class="player-footer"><span id="playerStatus">A little sound from my universe</span><label class="upload-label" for="audioUpload">Add your track ↗</label><input id="audioUpload" type="file" accept="audio/*" hidden></div>
+        <audio id="audioPlayer" preload="none"></audio>
+      </div>
+
+      <aside class="poem-panel" id="poem">
+        <div class="poem-heading">a little note about love <span>♡</span></div>
+        <p>In a world so loud,<br>you’re my quiet song.<br><br>Through every beat and brushstroke,<br>I find where I belong.</p>
+        <div class="poem-flourish">♡</div>
+      </aside>
+    </section>
+
+    <section class="about-strip section-wrap">
+      <span class="about-star">✦</span>
+      <p>Thanks for stopping by my little corner of the internet.</p>
+      <span class="about-star">✧</span>
+    </section>
+  </main>
+
+  <footer class="site-footer section-wrap">
+    <span>Draw. Make Music. Repeat. <b>♡</b></span>
+    <span class="footer-mark">RAKSOMUSIC · EST. IN MY ROOM</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

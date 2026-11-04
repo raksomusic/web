@@ -1,0 +1,141 @@
+/* RaksoMusic — neon sketchbook theme */
+:root {
+  --bg: #090812;
+  --panel: rgba(15, 13, 27, .88);
+  --ink: #f0dfff;
+  --muted: #b9b0d8;
+  --purple: #bd70ff;
+  --violet: #8758ff;
+  --blue: #70cfff;
+  --line: #9e6bff;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body {
+  margin: 0; color: var(--ink); background:
+    radial-gradient(ellipse at 75% 15%, rgba(67, 39, 122, .2), transparent 34%),
+    radial-gradient(ellipse at 12% 58%, rgba(47, 75, 144, .13), transparent 30%), var(--bg);
+  font-family: "Comfortaa", sans-serif; overflow-x: hidden;
+}
+body::before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.22; z-index:-1;
+  background-image: radial-gradient(#a98aff 1px, transparent 1px), radial-gradient(#70cfff 1px, transparent 1px);
+  background-size: 97px 97px, 143px 143px; background-position: 12px 19px, 50px 72px; }
+a { color: inherit; text-decoration: none; }
+.ambient { position:fixed; width:340px; height:340px; filter:blur(110px); opacity:.13; pointer-events:none; z-index:-1; }
+.ambient-one { background:#854aff; top:18%; right:0; }
+.ambient-two { background:#238fca; bottom:0; left:-100px; }
+.section-wrap, .site-header { width:min(1160px, calc(100% - 64px)); margin-inline:auto; }
+.site-header { min-height:88px; display:flex; align-items:center; justify-content:space-between; gap:30px; }
+.logo { font:700 clamp(1.45rem, 3vw, 2.25rem) "Kalam", cursive; color:#c18cff; text-shadow:0 0 18px #9b59ff70; white-space:nowrap; transform:rotate(-3deg); }
+.logo span { color:var(--blue); margin-left:4px; }
+.nav { display:flex; align-items:center; gap:clamp(18px, 3.5vw, 45px); }
+.nav a { color:#d7c7ff; font:600 1rem "Kalam", cursive; position:relative; transition:color .2s; }
+.nav a:hover, .nav a.active { color:var(--blue); }
+.nav a.active::after { content:""; position:absolute; height:2px; left:0; right:0; bottom:-8px; background:linear-gradient(90deg,var(--purple),var(--blue)); transform:rotate(-2deg); box-shadow:0 0 10px var(--blue); }
+.nav .headphone-link { font:700 1.6rem "Space Grotesk"; color:var(--blue); }
+.menu-toggle { display:none; background:none; border:0; padding:8px; }
+.menu-toggle span { display:block; width:25px; height:2px; margin:5px; background:var(--blue); }
+.hero { min-height:520px; display:grid; grid-template-columns:.86fr 1.14fr; align-items:center; position:relative; padding-top:22px; }
+.hero-copy { position:relative; z-index:2; padding:25px 0 42px 22px; }
+.eyebrow { font:400 clamp(1.5rem,3vw,2.2rem) "Kalam",cursive; margin:0 0 -5px 6px; color:#d9c5ff; }
+.hero h1 { margin:0; font:700 clamp(3.3rem,7.1vw,6.1rem)/1.03 "Kalam",cursive; letter-spacing:-.075em; color:#c28aff; text-shadow:0 0 22px #a35cff50; white-space:nowrap; }
+.hero h1 span { color:#79d9ff; }
+.hero h1 i { font-style:normal; color:#83dfff; font-size:.65em; vertical-align:top; }
+.role { margin:8px 0 0 7px; color:#9fcaff; font:400 clamp(1.05rem,2vw,1.55rem) "Kalam",cursive; }
+.scribble { width:255px; height:12px; margin:0 0 24px 72px; border-bottom:2px solid var(--purple); border-radius:50%; transform:rotate(-5deg); }
+.intro { font:400 1.25rem/1.4 "Kalam",cursive; color:#e4c8f5; margin:0 0 25px 8px; }
+.intro span { color:var(--blue); }
+.outline-button { display:inline-flex; align-items:center; gap:20px; border:1.5px solid var(--purple); border-radius:30px; padding:10px 20px; margin-left:0; color:#e3baff; font:400 1.05rem "Kalam",cursive; box-shadow:inset 0 0 12px #9b5cff1c, 0 0 14px #a65cff24; transition:.25s; }
+.outline-button:hover { border-color:var(--blue); box-shadow:0 0 22px #70cfff55; transform:translateY(-3px); }
+.outline-button span { color:var(--blue); font-size:1.35rem; }
+.tiny-note { margin:15px 0 0 20px; color:#8c83aa; font: .78rem "Kalam",cursive; }
+.hero-art { min-height:470px; position:relative; display:flex; align-items:center; justify-content:center; }
+.art-frame { position:absolute; width:75%; height:75%; border:1px solid #6c79ff; background:linear-gradient(135deg,#273c80aa,#8746d955); transform:rotate(7deg); box-shadow:0 0 35px #4d6bff24; }
+.frame-a { top:9%; right:7%; }
+.frame-b { top:13%; right:2%; transform:rotate(-7deg); border-color:#a46aff; opacity:.8; }
+.hero-person { width:88%; height:410px; position:relative; z-index:1; display:flex; align-items:flex-end; justify-content:center; overflow:hidden; border-radius:5px; }
+.hero-image { position:absolute; inset:0; background:
+  linear-gradient(0deg, #090812 0%, transparent 24%),
+  url("assets/rakso-hero.jpg") center 34% / cover no-repeat,
+  radial-gradient(ellipse at 55% 40%, #5868b9, #17122c 72%); filter:saturate(.92); }
+.image-caption { z-index:2; padding:8px 13px; margin-bottom:7px; background:#0908129c; color:#c8b8ed; font: .8rem "Kalam",cursive; letter-spacing:.04em; }
+.hero-sticker { position:absolute; z-index:3; color:#f3c9ae; font-size:3rem; text-shadow:0 0 12px #f3c9ae55; }
+.sticker-crown { top:1%; right:15%; transform:rotate(12deg); }
+.sticker-star { top:16%; left:4%; color:var(--blue); font-size:2.4rem; }
+.spark { position:absolute; color:var(--purple); z-index:3; font-size:1.6rem; }
+.spark-one { bottom:8%; left:4%; }.spark-two { right:1%; top:35%; color:var(--blue); }
+.feature-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:12px; }
+.feature-card { display:block; min-width:0; padding:13px 15px 16px; background:linear-gradient(145deg,#100e1eeb,#0c0b17e8); border:1px solid #9e70ff; border-radius:5px 12px 7px 9px; box-shadow:0 0 16px #9d64ff12; position:relative; transition:transform .25s,box-shadow .25s; }
+.feature-card::before { content:""; position:absolute; inset:4px; border:1px solid #7e83ff55; border-radius:4px 8px 5px 6px; pointer-events:none; }
+.feature-card:hover { transform:translateY(-5px) rotate(-.3deg); box-shadow:0 10px 30px #8d55ff28; }
+.card-heading { display:flex; align-items:center; gap:12px; position:relative; z-index:1; }
+.card-icon { font-size:2rem; color:var(--blue); }
+.card-heading h2 { margin:0; font:400 1.7rem "Kalam",cursive; color:#d5b5ff; }
+.arrow { margin-left:auto; font-size:1.6rem; color:var(--purple); }
+.card-visual { height:145px; margin:10px -2px 9px; position:relative; overflow:hidden; border:1px solid #7763d8; background:#17132b; }
+.sketch-visual { background:linear-gradient(180deg,#5d4c9b66,#151327), repeating-linear-gradient(120deg,transparent 0 28px,#a9a1e51c 29px 31px),linear-gradient(135deg,#1c2548,#5d477f); }
+.sketch-visual::before { content:""; position:absolute; width:130px; height:130px; border:1px solid #d7c5ff88; border-radius:50%; top:28px; left:30%; box-shadow:0 0 25px #a67bff55; }
+.visual-sun { position:absolute; font-size:3rem; color:#e0c6ff; left:12%; top:4px; }
+.sketch-lines { position:absolute; inset:35px 10px 0; opacity:.6; background:repeating-linear-gradient(90deg,transparent 0 24px,#111020 25px 28px),linear-gradient(0deg,#111020,#5d4b84 80%); clip-path:polygon(0 100%,0 55%,10% 48%,15% 68%,23% 20%,30% 64%,38% 35%,47% 70%,55% 12%,62% 72%,70% 38%,79% 70%,88% 28%,100% 55%,100% 100%); }
+.music-visual { display:grid; place-items:center; background:radial-gradient(circle at 50% 42%,#9d5cff 0,#5c35a8 15%,#18214e 48%,#0b1022 80%); }
+.music-visual::before { content:""; position:absolute; width:135px; height:135px; border:2px solid #8b69ff; border-radius:50%; box-shadow:0 0 25px #805bff; }
+.equalizer { display:flex; align-items:center; justify-content:center; gap:4px; height:65px; position:relative; z-index:1; }
+.equalizer i { width:4px; height:var(--h,25px); border-radius:5px; background:linear-gradient(var(--blue),var(--purple)); box-shadow:0 0 8px #9c7aff; }
+.equalizer i:nth-child(3n) { --h:46px }.equalizer i:nth-child(3n+1) { --h:32px }.equalizer i:nth-child(4n) { --h:55px }.equalizer i:nth-child(5n) { --h:19px }
+.visual-label { position:absolute; bottom:8px; left:10px; color:#e2d4ff; font: .75rem "Kalam",cursive; text-shadow:0 1px 5px #000; }
+.feature-card p { position:relative; margin:0 2px; color:#d8c9ed; font:.95rem/1.35 "Kalam",cursive; }
+.about-card { background:radial-gradient(ellipse at 50% 60%,#35205d55,transparent 70%),#100e1eeb; }
+.about-doodle { height:145px; display:grid; place-items:center; font-size:4rem; color:#b77aff; position:relative; }
+.about-doodle span:first-child { position:absolute; left:18%; top:18%; font-size:2rem; }.about-doodle span:last-child { position:absolute; right:18%; bottom:10%; color:#e2aaff; font-size:2.3rem; }
+.about-line { text-align:center; font-size:1.05rem !important; transform:rotate(-3deg); }
+.lower-grid { display:grid; grid-template-columns:1.45fr 1fr; gap:38px; align-items:center; margin-top:34px; }
+.panel { border:1px solid #9470ef; background:linear-gradient(130deg,#151124e8,#0c0b17e8); border-radius:5px 10px 7px 8px; padding:17px 20px 13px; box-shadow:inset 0 0 18px #8155c21a; }
+.panel-title { display:flex; justify-content:space-between; align-items:center; font:400 1.75rem "Kalam",cursive; color:#cdb3ff; }
+.mini-star { color:var(--blue); }
+.player-row { display:flex; align-items:center; gap:18px; margin:9px 0 5px; }
+.play-button { flex:0 0 64px; width:64px; height:64px; border:2px solid #d7b8ff; border-radius:50%; color:#d8b5ff; background:#171126; cursor:pointer; font-size:1.3rem; box-shadow:0 0 13px #a765ff25; transition:.2s; }
+.play-button:hover { border-color:var(--blue); color:var(--blue); transform:scale(1.05); }
+.track-info { flex:1; min-width:0; display:grid; grid-template-columns:1fr; gap:3px; }
+.track-info strong { font:600 1rem "Space Grotesk",sans-serif; color:#f1e4ff; }
+.track-info small { color:#bca9df; font:.78rem "Kalam",cursive; }
+.waveform { height:39px; display:flex; align-items:center; gap:3px; overflow:hidden; }
+.waveform i { flex:1; min-width:2px; height:var(--bar); border-radius:3px; background:linear-gradient(0deg,#9c55fa,#79cfff); opacity:.9; }
+.player-footer { display:flex; justify-content:space-between; align-items:center; gap:10px; color:#8f83ae; font:.72rem "Kalam",cursive; }
+.upload-label { color:#c895ff; text-decoration:underline; cursor:pointer; white-space:nowrap; }
+.poem-panel { text-align:center; padding:12px 8px; position:relative; transform:rotate(-1deg); }
+.poem-heading { font:400 1.15rem "Kalam",cursive; color:#8dcfff; margin-bottom:13px; }
+.poem-heading span { color:#d18cff; font-size:1.4rem; }
+.poem-panel p { color:#e0c4f4; font:italic 1.25rem/1.65 "Kalam",cursive; margin:0; }
+.poem-flourish { color:#8f6aff; font-size:2.7rem; text-align:right; margin-right:10%; }
+.about-strip { display:flex; align-items:center; justify-content:center; gap:22px; margin-top:25px; color:#9d91ba; font:.9rem "Kalam",cursive; text-align:center; }
+.about-star { color:var(--purple); font-size:1.3rem; }
+.site-footer { border-top:1px solid #8f68c955; margin-top:28px; padding:19px 0 28px; display:flex; justify-content:space-between; align-items:center; color:#c7b0e5; font:1.2rem "Kalam",cursive; }
+.site-footer b { color:#d18bff; }.footer-mark { color:#756b91; font: .62rem "Space Grotesk",sans-serif; letter-spacing:.14em; }
+@media (max-width: 850px) {
+  .section-wrap,.site-header { width:min(100% - 38px,680px); }
+  .hero { grid-template-columns:1fr 1fr; min-height:450px; }
+  .hero-copy { padding-left:0; }.hero h1 { font-size:clamp(2.8rem,7vw,4.5rem); }
+  .hero-art { min-height:390px; }.hero-person { height:350px; width:100%; }
+  .feature-grid { gap:12px; }.feature-card { padding:11px; }.card-heading h2 { font-size:1.35rem; }.card-visual { height:115px; }
+  .lower-grid { gap:18px; }
+}
+@media (max-width: 620px) {
+  .section-wrap,.site-header { width:calc(100% - 32px); }
+  .site-header { min-height:72px; position:relative; z-index:10; }
+  .menu-toggle { display:block; cursor:pointer; }
+  .nav { display:none; position:absolute; top:64px; right:0; left:0; padding:18px; background:#100d20f5; border:1px solid #9164d8; border-radius:10px; flex-direction:column; gap:16px; box-shadow:0 12px 30px #0009; }
+  .nav.open { display:flex; }.nav a { font-size:1.15rem; }
+  .hero { display:flex; flex-direction:column; align-items:stretch; padding-top:8px; }
+  .hero-copy { padding:15px 5px 0; }.hero h1 { font-size:clamp(3rem,14vw,5rem); }
+  .hero-art { min-height:320px; margin-top:-2px; }.hero-person { height:300px; width:92%; }
+  .hero-copy .intro { font-size:1.12rem; }.tiny-note { display:none; }
+  .feature-grid { grid-template-columns:1fr; gap:14px; margin-top:18px; }
+  .feature-card { display:grid; grid-template-columns:1fr 42%; grid-template-rows:auto 1fr; column-gap:12px; min-height:150px; }
+  .card-heading { grid-column:1 / -1; }.card-visual { grid-column:2; grid-row:2; height:95px; margin:6px 0; }
+  .feature-card > p { grid-column:1; grid-row:2; align-self:center; }
+  .about-card .about-doodle { grid-column:2; grid-row:2; height:95px; }.about-card .about-line { grid-column:1; grid-row:2; align-self:center; }
+  .lower-grid { grid-template-columns:1fr; gap:15px; margin-top:22px; }
+  .poem-panel { padding:20px 5px; }.poem-panel p { font-size:1.12rem; }
+  .site-footer { flex-direction:column; gap:8px; text-align:center; }.footer-mark { font-size:.58rem; }
+}
+@media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; animation:none !important; } }
